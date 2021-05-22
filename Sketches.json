@@ -1,0 +1,22 @@
+{
+  "Sketches": [
+    {
+      "Description": "Sorting visualization. Has support for a few different sorting alogorithms.",
+      "FileUrl": "sorting",
+      "Progress": 85,
+      "Title": "Sorting"
+    },
+    {
+      "Description": "Generation of Bezier curves and Catmull-Rom splines. Todo: Add more interpolation alogorithms.",
+      "FileUrl": "interpolation",
+      "Progress": 40,
+      "Title": "Interpolation"
+    },
+    {
+      "Description": "A set of moving points where a line is drawn between two points within a certain radius.",
+      "FileUrl": "points-poly",
+      "Progress": 100,
+      "Title": "Points Poly Formation"
+    }
+  ]
+}
