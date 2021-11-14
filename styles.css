@@ -3,17 +3,20 @@
 body,
 html {
   margin: 0px;
+  overflow: hidden;
 }
 
 #header {
-  background-color: #212121;
+  background-color: #000000;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #dddddd5f;
 }
 
-button {
+button,
+select {
   min-width: 64px;
   font-family: "Abel", sans-serif;
   font-size: 0.875rem;
@@ -32,7 +35,44 @@ button {
   outline: 0;
 }
 
-button:hover {
+button:hover,
+select:hover {
   color: #000;
-  background-color: #dddddd7f;
+  background-color: #dddddd5f;
+}
+
+fieldset:hover {
+  color: #fff;
+  background-color: #dddddd5f;
+}
+
+fieldset {
+  min-width: 64px;
+  font-family: "Abel", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02857em;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #ddd;
+  background-color: transparent;
+  margin: 10px;
+  height: 52px;
+  text-transform: none;
+  padding: 5px 15px;
+  cursor: text;
+  outline: 0;
+  transform: translateY(-5px);
+}
+
+fieldset input {
+  border: 0;
+  width: 90%;
+  background: transparent;
+  color: #ddd;
+  margin-top: -2px;
+  padding-top: 0;
+  font-family: inherit;
+  outline: 0;
 }

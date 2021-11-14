@@ -13,6 +13,7 @@ const curves = {
 };
 let curveFunction = (time) => Curves.bezier(p, time, points, drawPoints);
 let btnStart;
+let btnReset;
 let selCurve;
 let inpNumberOfPoints;
 
@@ -27,6 +28,7 @@ function dom() {
   DOM.PARENT = document.getElementById("header");
 
   btnStart = DOM.button(start, "Start", parent);
+  btnReset = DOM.button(restart, "Reset", parent);
   selCurve = DOM.dropdown([
     curves.BEZIER,
     curves.CATMULLROM_UNIFORM,
@@ -57,6 +59,11 @@ function draw() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(0);
+}
+
 function mousePressed() {
   if (!isRunning) {
     if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
@@ -75,7 +82,7 @@ function start() {
     btnStart.elt.textContent === "Start" ? "Stop" : "Start";
 }
 
-function reset() {
+function restart() {
   if (!isRunning) {
     userPoints = [];
     background(0);
