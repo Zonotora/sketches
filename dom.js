@@ -17,7 +17,7 @@ class DOM {
   static button(f, title) {
     const div = createDiv().addClass("button-container");
     const button = createButton(title);
-    button.mousePressed(f);
+    button.mousePressed(() => f(button));
     button.parent(div);
     button.addClass("button");
     div.parent(DOM.PARENT);
