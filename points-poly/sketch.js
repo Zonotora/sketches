@@ -1,3 +1,4 @@
+let h = 0;
 let points = [];
 let numberOfPoints = 80;
 let maxSpeed = 2;
@@ -8,7 +9,8 @@ let deacceleration = 100;
 let drag = false;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  h = windowHeight - 60;
+  createCanvas(windowWidth, h);
   colorMode(HSB, 100);
   dom();
   init();
@@ -35,8 +37,8 @@ function draw() {
 
     if (point.position.x < 0) point.position.x = windowWidth;
     else if (point.position.x > windowWidth) point.position.x = 0;
-    if (point.position.y < 0) point.position.y = windowHeight;
-    else if (point.position.y > windowHeight) point.position.y = 0;
+    if (point.position.y < 0) point.position.y = h;
+    else if (point.position.y > h) point.position.y = 0;
 
     for (let j = 0; j < points.length; j++) {
       const other = points[j];
@@ -67,7 +69,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, h);
   background(0);
 }
 
@@ -83,7 +85,7 @@ function init() {
   points = [];
   for (let i = 0; i < numberOfPoints; i++) {
     points.push({
-      position: createVector(random(0, windowWidth), random(0, windowHeight)),
+      position: createVector(random(0, windowWidth), random(0, h)),
       speed: createVector(
         random(-maxSpeed, maxSpeed),
         random(-maxSpeed, maxSpeed)

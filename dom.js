@@ -11,8 +11,7 @@ class DOM {
     slider.elt.oninput = () => f(slider);
     slider.addClass("slider");
     slider.parent(div);
-    console.log(DOM.PARENT);
-    // div.parent(DOM.PARENT);
+    div.parent(DOM.PARENT);
     return slider;
   }
   static button(f, title) {

@@ -27,8 +27,8 @@ function setup() {
 function dom() {
   DOM.PARENT = document.getElementById("header");
 
-  btnStart = DOM.button(start, "Start", parent);
-  btnReset = DOM.button(restart, "Reset", parent);
+  btnStart = DOM.button(start, "Start");
+  btnReset = DOM.button(restart, "Reset");
   selCurve = DOM.dropdown([
     curves.BEZIER,
     curves.CATMULLROM_UNIFORM,

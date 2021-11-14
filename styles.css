@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Teko:wght@300&display=swap");
 
 body,
 html {
@@ -27,7 +27,8 @@ select {
   border-radius: 4px;
   color: #ddd;
   background-color: transparent;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 42px;
   text-transform: none;
   padding: 5px 15px;
